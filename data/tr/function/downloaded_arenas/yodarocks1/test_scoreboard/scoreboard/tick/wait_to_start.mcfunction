@@ -1,0 +1,1 @@
+scoreboard players add tick.wait_to_start callbacks 1

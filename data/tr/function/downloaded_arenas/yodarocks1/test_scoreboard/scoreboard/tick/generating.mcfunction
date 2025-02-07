@@ -1,0 +1,1 @@
+scoreboard players add tick.generating callbacks 1

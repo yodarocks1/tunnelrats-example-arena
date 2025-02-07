@@ -1,0 +1,1 @@
+scoreboard players add ready.players callbacks 1

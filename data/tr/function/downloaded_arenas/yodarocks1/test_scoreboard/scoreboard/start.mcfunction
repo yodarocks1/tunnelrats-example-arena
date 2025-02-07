@@ -1,0 +1,1 @@
+scoreboard players add start callbacks 1

@@ -1,0 +1,1 @@
+scoreboard players add ready.arena callbacks 1

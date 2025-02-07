@@ -1,0 +1,1 @@
+scoreboard players add tick.ending callbacks 1
