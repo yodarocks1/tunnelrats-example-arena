@@ -42,22 +42,6 @@ function tr:data_update/from_datapack {											\
 				x:11,y:11,z:11													\
 			}																	\
 		],																		\
-		info:'[{"text":"This is a test of the datapack download system!"}]',	\
-		on: {																	\
-			load: 'log/load',													\
-			start: 'log/start',													\
-			end: 'log/end',														\
-			unload: 'log/unload',												\
-			tick: {																\
-				generating: 'log/tick/generating',								\
-				wait_to_start: 'log/tick/wait_to_start',						\
-				running: 'log/tick/running',									\
-				ending: 'log/tick/ending'										\
-			},																	\
-			ready: {															\
-				arena: 'log/ready/arena',										\
-				players: 'log/ready/players'									\
-			}																	\
-		}																		\
+		info:'[{"text":"This is a test of the datapack download system!"}]'		\
 	}																			\
 }
