@@ -26,7 +26,7 @@
 # |   9   | unload             | Called as the map is being reset/unloaded                          | start of game/reset                                  |
 #
 
-function tr:data_update/from_datapack {											\
+return run function tr:data_update/from_datapack {								\
 	user_id:"yodarocks1",														\
 	map_id:"test_title",														\
 	version:"dev",																\
