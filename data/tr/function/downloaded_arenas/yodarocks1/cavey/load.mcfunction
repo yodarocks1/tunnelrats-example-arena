@@ -35,7 +35,7 @@ return run function tr:data_update/from_datapack {								\
 	map_id:"cavey",																\
 	version:"dev",																\
 	name:"Cave-y Command Blocks",												\
-	reload:"load",																\
+	reload_function:"load",														\
 	data:{																		\
 		sections: [																\
 			{																	\
