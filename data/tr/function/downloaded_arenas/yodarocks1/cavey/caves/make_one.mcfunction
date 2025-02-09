@@ -1,5 +1,13 @@
-$fill ~$(x1) ~$(y1) ~$(z1) ~$(x2) ~$(y2) ~$(z2) air replace #minecraft:mineable/axe
-$fill ~$(x1) ~$(y1) ~$(z1) ~$(x2) ~$(y2) ~$(z2) air replace #minecraft:mineable/pickaxe
-$fill ~$(x1) ~$(y1) ~$(z1) ~$(x2) ~$(y2) ~$(z2) air replace #minecraft:mineable/shovel
-setblock ~ ~ ~ air
-kill @s
+execute if entity @s[tag=tr.map.flip,tag=!tr.map.center] \
+        run function tr:downloaded_arenas/yodarocks1/cavey/caves/fill {type:"int",scale:-1}
+
+execute if entity @s[tag=tr.map.noflip,tag=!tr.map.center] \
+        run function tr:downloaded_arenas/yodarocks1/cavey/caves/fill {type:"int",scale:1}
+
+execute if entity @s[tag=tr.map.center] \
+        run function tr:downloaded_arenas/yodarocks1/cavey/caves/fill {type:"int",scale:-1}
+execute if entity @s[tag=tr.map.center] \
+        run function tr:downloaded_arenas/yodarocks1/cavey/caves/fill {type:"int",scale:1}
+
+#setblock ~ ~ ~ air
+#kill @s

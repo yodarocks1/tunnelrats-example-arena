@@ -41,7 +41,7 @@ function tr:data_update/from_datapack {											\
 				blocks:[														\
 					{id:"minecraft:air",nbt:""},								\
 					{p: 0.2f, id:"minecraft:command_block", nbt:{				\
-						Command: "execute unless entity @n[type=marker,distance=..2,tag=tr.map.cavey.tree] run summon marker ~ ~ ~ {Tags:['tr.map.cavey.tree','tr.keep']}", \
+						Command: "execute unless entity @n[type=marker,distance=..2,tag=tr.map.cavey.tree] run summon marker ~ ~ ~ {Tags:['tr.map.cavey.tree','tr.map']}", \
 						CustomName: '["Trees"]',								\
 						auto: 1b												\
 					}}															\
@@ -54,27 +54,42 @@ function tr:data_update/from_datapack {											\
 					{p: 10.0f, id:"minecraft:iron_ore", nbt:""},				\
 					{p: 3.0f, id:"minecraft:coal_ore", nbt:""},					\
 					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
-						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.1','tr.map.cavey.cave','tr.keep']}",	\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1: -1,y1: -1,z1: -1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",													\
 						CustomName: '["2x2x2 void, NW"]',						\
 						auto: 1b												\
 					}},															\
 					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
-						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.2','tr.map.cavey.cave','tr.keep']}",	\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1:  1,y1: -1,z1:  1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",	\
 						CustomName: '["2x2x2 void, SE"]',						\
 						auto: 1b												\
 					}},															\
 					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
-						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.3','tr.map.cavey.cave','tr.keep']}",	\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1: -1,y1:  1,z1:  1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",	\
 						CustomName: '["2x2x2 void, SW"]',						\
 						auto: 1b												\
 					}},															\
 					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
-						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.4','tr.map.cavey.cave','tr.keep']}",	\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1:  1,y1:  1,z1: -1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",	\
 						CustomName: '["2x2x2 void, NE"]',						\
 						auto: 1b												\
 					}},															\
 					{p: 1.0f, id:"minecraft:command_block", nbt:{				\
-						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.5','tr.map.cavey.cave','tr.keep']}",	\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1: -1,y1: -1,z1: -1, \
+						x2:  1,y2:  1,z2:  1  \
+						}}}",	\
 						CustomName: '["3x3x3 void"]',							\
 						auto: 1b												\
 					}}															\
