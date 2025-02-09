@@ -9,5 +9,5 @@ execute if entity @s[tag=tr.map.center] \
 execute if entity @s[tag=tr.map.center] \
         run function tr:downloaded_arenas/yodarocks1/cavey/caves/fill {type:"int",scale:1}
 
-#setblock ~ ~ ~ air
-#kill @s
+setblock ~ ~ ~ air
+kill @s

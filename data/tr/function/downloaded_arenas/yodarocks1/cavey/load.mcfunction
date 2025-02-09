@@ -35,13 +35,24 @@ function tr:data_update/from_datapack {											\
 	map_id:"cavey",																\
 	version:"dev",																\
 	name:"Cave-y Command Blocks",												\
+	reload:"load",																\
 	data:{																		\
 		sections: [																\
 			{																	\
 				blocks:[														\
 					{id:"minecraft:air",nbt:""},								\
 					{p: 0.2f, id:"minecraft:command_block", nbt:{				\
-						Command: "execute unless entity @n[type=marker,distance=..2,tag=tr.map.cavey.tree] run summon marker ~ ~ ~ {Tags:['tr.map.cavey.tree','tr.map']}", \
+						Command: "execute positioned ~ 0 ~ \
+						                  unless entity @n[type=marker,distance=..4,tag=tr.map.cavey.pond] \
+										  run summon marker ~ ~ ~ {Tags:['tr.map.cavey.pond','tr.map']}", \
+						CustomName: '["Ponds"]',								\
+						auto: 1b												\
+					}},															\
+					{p: 0.2f, id:"minecraft:command_block", nbt:{				\
+						Command: "execute positioned ~ 0 ~ \
+										  unless entity @n[type=marker,distance=..4,tag=tr.map.cavey.pond] \
+						                  unless entity @n[type=marker,distance=..2,tag=tr.map.cavey.tree] \
+										  run summon marker ~ ~ ~ {Tags:['tr.map.cavey.tree','tr.map']}", \
 						CustomName: '["Trees"]',								\
 						auto: 1b												\
 					}}															\
@@ -50,8 +61,8 @@ function tr:data_update/from_datapack {											\
 			},																	\
 			{																	\
 				blocks:[														\
-					{id:"minecraft:stone",nbt:""},								\
-					{p: 10.0f, id:"minecraft:iron_ore", nbt:""},				\
+					{id:"minecraft:iron_ore", nbt:""},				\
+					{p:82.8f, id:"minecraft:stone",nbt:""},								\
 					{p: 3.0f, id:"minecraft:coal_ore", nbt:""},					\
 					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
 						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
@@ -95,6 +106,60 @@ function tr:data_update/from_datapack {											\
 					}}															\
 				],																\
 				x:11,y:11,z:11													\
+			},																	\
+			{																	\
+				blocks:[														\
+					{id:"minecraft:diamond_ore", nbt:""},				\
+					{p:87.8f, id:"minecraft:stone",nbt:""},								\
+					{p: 3.0f, id:"minecraft:coal_ore", nbt:""},					\
+					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1: -1,y1: -1,z1: -1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",													\
+						CustomName: '["2x2x2 void, NW"]',						\
+						auto: 1b												\
+					}},															\
+					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1:  1,y1: -1,z1:  1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",	\
+						CustomName: '["2x2x2 void, SE"]',						\
+						auto: 1b												\
+					}},															\
+					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1: -1,y1:  1,z1:  1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",	\
+						CustomName: '["2x2x2 void, SW"]',						\
+						auto: 1b												\
+					}},															\
+					{p: 0.8f, id:"minecraft:command_block", nbt:{				\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1:  1,y1:  1,z1: -1, \
+						x2:  0,y2:  0,z2:  0  \
+						}}}",	\
+						CustomName: '["2x2x2 void, NE"]',						\
+						auto: 1b												\
+					}},															\
+					{p: 1.0f, id:"minecraft:command_block", nbt:{				\
+						Command: "summon marker ~ ~ ~ {Tags:['tr.map.cavey.cave','tr.map'],data:{area:{ \
+						x1: -1,y1: -1,z1: -1, \
+						x2:  1,y2:  1,z2:  1  \
+						}}}",	\
+						CustomName: '["3x3x3 void"]',							\
+						auto: 1b												\
+					}}															\
+				],																\
+				x:11,y:11,z:11													\
+			},																	\
+			{																	\
+				blocks:[														\
+					{id: "minecraft:obsidian", nbt:""}							\
+				],																\
+				x:1,y:3,z:3														\
 			}																	\
 		],																		\
 		info:'["This is a test of the datapack download system! But more importantly, it runs tests with ",{"text":"Command Blocks","color":"dark_purple","bold":true}," and ",{"text":"Callbacks","color":"dark_purple","bold":true}]',	\

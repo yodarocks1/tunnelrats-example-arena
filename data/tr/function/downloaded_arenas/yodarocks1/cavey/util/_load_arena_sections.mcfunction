@@ -1,0 +1,1 @@
+$data modify storage tr:tmp arena_sections set from storage tr:settings arenas[{name:"$(name)"}].sections
